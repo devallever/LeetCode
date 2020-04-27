@@ -1,6 +1,6 @@
-package com.allever.leetcode;
+package com.allever.leetcode.solution1;
 
-public class LeetCode {
+public class Solution {
     public static void main(String[] args) {
         int[] exam1Input = {2, 7, 11, 15};
         int exam1Target = 22;
