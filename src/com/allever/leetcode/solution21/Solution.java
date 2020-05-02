@@ -1,4 +1,4 @@
-package com.allever.leetcode.solution2;
+package com.allever.leetcode.solution21;
 
 public class Solution {
     public static void main(String[] args) {
