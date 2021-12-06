@@ -32,7 +32,9 @@ public class Solution {
         //先序遍历
 //        preorderTraversal(root, result);
         //后序遍历
-        postorderTraversal(root, result);
+//        postorderTraversal(root, result);
+        //层次遍历
+        levelTraversal(root, result);
         return result;
     }
 
@@ -78,6 +80,39 @@ public class Solution {
         postorderTraversal(node.left, list);
         postorderTraversal(node.right, list);
         list.add(node.value);
+    }
+
+    /**
+     * 层次遍历
+     * @param node
+     * @param list
+     */
+    public static void levelTraversal(TreeNode node, List<Integer> list) {
+        if (node == null) {
+            return;
+        }
+
+        ArrayList<TreeNode> treeList = new ArrayList<>();
+        //出队index
+        int i = 0;
+        //入队index
+        int j = 0;
+        treeList.add(node);
+        j++;
+        while (i != j) {
+            TreeNode treeNode = treeList.get(i);
+            list.add(treeNode.value);
+            i++;
+            if (treeNode.left != null) {
+                treeList.add(treeNode.left);
+                j++;
+            }
+            if (treeNode.right != null) {
+                treeList.add(treeNode.right);
+                j++;
+            }
+        }
+
     }
 
 }
